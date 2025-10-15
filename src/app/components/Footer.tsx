@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="text-[#8a1102]">
           <a 
             href="mailto:umdnsa@gmail.com" 
-            className="hover:underline"
+            className="hover:underline text-sm"
           >
             Email us at umdnsa@gmail.com
           </a>
