@@ -1,11 +1,7 @@
-// Routes to a page where one can enter their email / find our links
-// a virtual linktree -- has upcoming events too. 
-
 'use client'
 
 import { Open_Sans } from 'next/font/google'
-import Link from 'next/link'
-import { ArrowLeft, Mail, Calendar } from 'lucide-react'
+import { Calendar, Mail, Instagram, MessageCircle } from 'lucide-react'
 
 const openSans = Open_Sans({
   weight: ['400', '600', '700'],
@@ -15,60 +11,96 @@ const openSans = Open_Sans({
 
 export default function ApplicationsClosed() {
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center py-20 px-6 ${openSans.className}`}>
-      <div className="max-w-2xl w-full text-center">
-        {/* Main Content */}
-        <div className="bg-white rounded-3xl shadow-xl p-12 mb-8">
-          <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gray-100 mb-6">
-              <Calendar size={40} className="text-gray-600" />
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Applications Are Currently Closed
-            </h1>
-            
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Thank you for your interest in joining our board! We're not currently accepting applications, 
-              but we'd love to hear from you when positions open up.
-            </p>
+    <div className={`min-h-screen bg-white flex flex-col justify-center ${openSans.className}`}>
+      {/* Main content wrapper - centered like other pages */}
+      <div className="flex flex-col justify-center px-4 sm:px-6 py-12 lg:py-16">
+        
+        {/* Header */}
+        <div className="text-center mb-10 lg:mb-14">
+          <p className="text-gray-500 text-sm lg:text-base font-medium tracking-wider uppercase mb-3">
+            Check Back Soon
+          </p>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-3 lg:mb-4">
+            Applications Closed
+          </h1>
+          <p className="text-gray-600 text-base lg:text-lg xl:text-xl max-w-xl mx-auto">
+            We're not currently recruiting, but we'd love to connect with you when positions open.
+          </p>
+        </div>
 
-            <div className="w-24 h-1 bg-gray-900 mx-auto mb-8" />
-
-            {/* Info Box */}
-            <div className="bg-gray-50 rounded-2xl p-6 text-left">
-              <h2 className="text-xl font-bold text-gray-900 mb-3">
-                Stay in the loop
-              </h2>
-              <p className="text-gray-700 mb-4">
-                Board applications typically open at the beginning of each semester. 
-                Follow us on social media or check back here for updates on when we're recruiting new members.
-              </p>
-              
-              {/* Contact Option */}
-              <div className="flex items-start gap-3 mt-6 p-4 bg-white rounded-xl">
-                <Mail size={24} className="text-gray-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">
-                    Questions about joining?
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Reach out to us at <a href="mailto:board@example.com" className="text-gray-900 hover:underline font-medium">board@example.com</a>
-                  </p>
-                </div>
+        {/* Info Cards */}
+        <div className="max-w-2xl mx-auto w-full mb-12 lg:mb-16">
+          <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
+            {/* When We Recruit */}
+            <div className="bg-gray-50 rounded-2xl p-6 lg:p-8 text-center hover:bg-gray-100 transition-colors duration-300">
+              <div className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 bg-white text-gray-700 rounded-xl mb-3 lg:mb-4 shadow-sm">
+                <Calendar className="w-5 h-5 lg:w-6 lg:h-6" />
               </div>
+              <h3 className="font-bold text-gray-900 text-sm lg:text-base mb-2">When We Recruit</h3>
+              <p className="text-gray-600 text-xs lg:text-sm leading-relaxed">
+                Board applications typically open at the start of each semester
+              </p>
+            </div>
+
+            {/* Contact */}
+            <div className="bg-gray-50 rounded-2xl p-6 lg:p-8 text-center hover:bg-gray-100 transition-colors duration-300">
+              <div className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 bg-white text-gray-700 rounded-xl mb-3 lg:mb-4 shadow-sm">
+                <Mail className="w-5 h-5 lg:w-6 lg:h-6" />
+              </div>
+              <h3 className="font-bold text-gray-900 text-sm lg:text-base mb-2">Questions?</h3>
+              <a 
+                href="mailto:board@example.com" 
+                className="text-gray-600 text-xs lg:text-sm leading-relaxed hover:text-gray-900 transition-colors"
+              >
+                board@example.com
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Back Button */}
-        <Link 
-          href="/meet-the-board"
-          className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors duration-300 group"
-        >
-          <ArrowLeft size={18} className="transition-transform duration-300 group-hover:-translate-x-1" />
-          <span className="text-base font-medium">Back to Meet the Board</span>
-        </Link>
+        {/* Status Card */}
+        <div className="max-w-md mx-auto w-full">
+          <div className="bg-gray-50 rounded-3xl p-6 sm:p-8 text-center">
+            {/* Status indicator */}
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span className="w-2 h-2 bg-gray-300 rounded-full" />
+              <span className="w-2 h-2 bg-gray-300 rounded-full" />
+              <span className="w-2 h-2 bg-gray-300 rounded-full" />
+            </div>
+            
+            <p className="text-gray-700 font-medium mb-2">
+              Stay in the loop
+            </p>
+            <p className="text-gray-500 text-sm">
+              Follow our socials to know when applications open
+            </p>
+
+            {/* Social Links */}
+            <div className="flex justify-center gap-3 mt-6">
+              <a
+                href="#"
+                className="bg-white hover:bg-gray-900 hover:text-white text-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 text-sm font-medium shadow-sm"
+                aria-label="Instagram"
+              >
+                IG
+              </a>
+              <a
+                href="#"
+                className="bg-white hover:bg-gray-900 hover:text-white text-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 text-sm font-medium shadow-sm"
+                aria-label="GroupMe"
+              >
+                GM
+              </a>
+              <a
+                href="#"
+                className="bg-white hover:bg-gray-900 hover:text-white text-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 text-sm font-medium shadow-sm"
+                aria-label="Discord"
+              >
+                DC
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
