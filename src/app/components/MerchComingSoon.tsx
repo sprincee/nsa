@@ -31,7 +31,7 @@ export default function MerchComingSoon() {
             NSA Merch
           </h1>
           <p className="text-gray-600 text-base lg:text-lg xl:text-xl max-w-xl mx-auto">
-            We're cooking up something special. Rep your heritage with style.
+            We&apos;re cooking up something special. Rep your heritage with style.
           </p>
         </div>
 

@@ -131,16 +131,6 @@ const boardMembers: BoardMember[] = [
   }
 ]
 
-// Lotus flower SVG component
-const LotusIcon = () => (
-  <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M50 85C50 85 35 75 35 55C35 45 40 35 50 30C60 35 65 45 65 55C65 75 50 85 50 85Z" fill="black" stroke="black" strokeWidth="1.5"/>
-    <path d="M50 30C50 30 40 35 35 45C30 55 28 65 35 70C42 65 45 55 50 45C50 45 50 35 50 30Z" fill="black" stroke="black" strokeWidth="1.5"/>
-    <path d="M50 30C50 30 60 35 65 45C70 55 72 65 65 70C58 65 55 55 50 45C50 45 50 35 50 30Z" fill="black" stroke="black" strokeWidth="1.5"/>
-    <path d="M35 70C35 70 30 75 25 75C20 75 18 70 20 65C22 60 28 58 35 60C35 60 35 65 35 70Z" fill="black" stroke="black" strokeWidth="1.5"/>
-    <path d="M65 70C65 70 70 75 75 75C80 75 82 70 80 65C78 60 72 58 65 60C65 60 65 65 65 70Z" fill="black" stroke="black" strokeWidth="1.5"/>
-  </svg>
-)
 
 export default function MeetTheBoard() {
   const [selectedMember, setSelectedMember] = useState<BoardMember | null>(null)

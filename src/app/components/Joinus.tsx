@@ -133,7 +133,7 @@ export default function JoinUs() {
               Ready to Join?
             </h2>
             <p className="text-gray-600 text-center mb-6 lg:mb-8 text-sm lg:text-base">
-              Fill out the form below and we'll add you to our community!
+              Fill out the form below and we&apos;ll add you to our community!
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">

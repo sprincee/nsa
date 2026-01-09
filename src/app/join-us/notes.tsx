@@ -1,7 +1,7 @@
 'use client'
 
 import { Open_Sans } from 'next/font/google'
-import { Calendar, Mail, Instagram, MessageCircle } from 'lucide-react'
+import { Calendar, Mail} from 'lucide-react'
 
 const openSans = Open_Sans({
   weight: ['400', '600', '700'],
@@ -24,7 +24,7 @@ export default function ApplicationsClosed() {
             Applications Closed
           </h1>
           <p className="text-gray-600 text-base lg:text-lg xl:text-xl max-w-xl mx-auto">
-            We're not currently recruiting, but we'd love to connect with you when positions open.
+            We&apos;re not currently recruiting, but we&apos;d love to connect with you when positions open.
           </p>
         </div>
 

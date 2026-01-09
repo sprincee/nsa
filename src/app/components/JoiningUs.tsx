@@ -25,7 +25,7 @@ export default function ApplicationsClosed() {
             Applications Closed
           </h1>
           <p className="text-gray-600 text-base lg:text-lg xl:text-xl max-w-xl mx-auto">
-            We're not currently recruiting, but we'd love to connect with you when positions open.
+            We&apos;re not currently recruiting, but we&apos;d love to connect with you when positions open.
           </p>
         </div>
 

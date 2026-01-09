@@ -260,7 +260,7 @@ export default function CarouselBoard() {
                         offset === 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                       }`}>
                         <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                        <p className="text-xs lg:text-sm xl:text-base text-gray-600 italic max-w-[280px] lg:max-w-[320px] mx-auto">"{member.quote}"</p>
+                        <p className="text-xs lg:text-sm xl:text-base text-gray-600 italic max-w-[280px] lg:max-w-[320px] mx-auto">&quot;{member.quote}&quot;</p>
                       </div>
                     </button>
                   </div>
