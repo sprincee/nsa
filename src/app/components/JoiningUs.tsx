@@ -50,10 +50,10 @@ export default function ApplicationsClosed() {
               </div>
               <h3 className="font-bold text-gray-900 text-sm lg:text-base mb-2">Questions?</h3>
               <a 
-                href="mailto:umdnsa@gmail.com" 
+                href="mailto:nsaumd@gmail.com" 
                 className="text-gray-600 text-xs lg:text-sm leading-relaxed hover:text-gray-900 transition-colors"
               >
-                umdnsa@gmail.com
+                nsaumd@gmail.com
               </a>
             </div>
           </div>

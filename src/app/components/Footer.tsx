@@ -14,10 +14,10 @@ export default function Footer() {
         {/* Email Section */}
         <div className="text-[#8a1102]">
           <a 
-            href="mailto:umdnsa@gmail.com" 
+            href="mailto:nsaumd@gmail.com" 
             className="hover:underline text-sm"
           >
-            Email us at umdnsa@gmail.com
+            Email us at nsaumd@gmail.com
           </a>
         </div>
 
