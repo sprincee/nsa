@@ -1,8 +1,7 @@
 'use client'
 
 import { Open_Sans } from 'next/font/google'
-import Link from 'next/link'
-import { ArrowLeft, Sparkles } from 'lucide-react'
+import { Shirt, ShoppingBag, Sticker, Coffee } from 'lucide-react'
 
 const openSans = Open_Sans({
   weight: ['400', '600', '700'],
@@ -10,65 +9,83 @@ const openSans = Open_Sans({
   display: 'swap',
 })
 
+const upcomingItems = [
+  { icon: Shirt, label: 'Hoodies' },
+  { icon: ShoppingBag, label: 'Tees' },
+  { icon: Sticker, label: 'Stickers' },
+  { icon: Coffee, label: 'Accessories' },
+]
+
 export default function MerchComingSoon() {
   return (
-    <div className={`min-h-screen bg-white flex flex-col ${openSans.className}`}>
-      {/* Back to Home Button - Top Left */}
-      <div className="absolute top-8 left-8">
-        <Link 
-          href="/"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
-        >
-          <ArrowLeft size={20} className="transition-transform duration-300 group-hover:-translate-x-1" />
-          <span className="text-base font-medium">Back to Home</span>
-        </Link>
-      </div>
-
-      {/* Main Content - Centered */}
-      <div className="flex-1 flex items-center justify-center px-6">
-        <div className="max-w-2xl w-full text-center">
-          {/* Icon */}
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gray-50 mb-8 animate-pulse">
-            <Sparkles size={48} className="text-gray-400" />
-          </div>
-
-          {/* Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            NSA Merch
-          </h1>
-          
-          <p className="text-2xl md:text-3xl text-gray-600 mb-4">
+    <div className={`min-h-screen bg-white flex flex-col justify-center ${openSans.className}`}>
+      {/* Main content wrapper - centered like other pages */}
+      <div className="flex flex-col justify-center px-4 sm:px-6 py-12 lg:py-16">
+        
+        {/* Header */}
+        <div className="text-center mb-10 lg:mb-14">
+          <p className="text-gray-500 text-sm lg:text-base font-medium tracking-wider uppercase mb-3">
             Coming Soon
           </p>
-
-          <div className="w-32 h-1 bg-gray-900 mx-auto mb-8" />
-
-          {/* Description */}
-          <p className="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto mb-12">
-            We're working on something special. Hoodies, tees, stickers, and more are on the way. 
-            Stay tuned for the launch!
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-3 lg:mb-4">
+            NSA Merch
+          </h1>
+          <p className="text-gray-600 text-base lg:text-lg xl:text-xl max-w-xl mx-auto">
+            We're cooking up something special. Rep your heritage with style.
           </p>
+        </div>
 
-          {/* Email Notification */}
-          <div className="bg-gray-50 rounded-2xl p-8 max-w-md mx-auto">
-            <p className="text-sm text-gray-700 mb-4">
-              Want to be notified when merch drops?
-            </p>
-            <a 
-              href="mailto:merch@nsa.com?subject=Notify me when merch is available"
-              className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors duration-300"
-            >
-              Get Notified
-            </a>
+        {/* Product Preview Cards */}
+        <div className="max-w-3xl mx-auto w-full mb-12 lg:mb-16">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6">
+            {upcomingItems.map((item, index) => (
+              <div 
+                key={index}
+                className="group relative bg-gray-50 rounded-2xl p-6 lg:p-8 text-center hover:bg-gray-100 transition-all duration-300 hover:scale-105 cursor-default"
+              >
+                {/* Decorative blur effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-200/50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <div className="relative">
+                  <div className="inline-flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-white text-gray-700 rounded-xl mb-3 lg:mb-4 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                    <item.icon className="w-6 h-6 lg:w-8 lg:h-8" />
+                  </div>
+                  <p className="font-semibold text-gray-900 text-sm lg:text-base">{item.label}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
 
-      {/* Footer note */}
-      <div className="pb-8 text-center">
-        <p className="text-sm text-gray-400">
-          Follow us on social media for updates
-        </p>
+        {/* Status Card */}
+        <div className="max-w-md mx-auto w-full">
+          <div className="bg-gray-50 rounded-3xl p-6 sm:p-8 text-center">
+            {/* Progress indicator */}
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span className="w-2 h-2 bg-gray-900 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
+              <span className="w-2 h-2 bg-gray-300 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
+            </div>
+            
+            <p className="text-gray-700 font-medium mb-2">
+              Currently in development
+            </p>
+            <p className="text-gray-500 text-sm">
+              Follow our socials to be the first to know when we drop
+            </p>
+
+            {/* Social Links */}
+            <div className="flex justify-center gap-3 mt-6">
+              <a
+                href="https://www.instagram.com/umdnsa/"
+                className="bg-white hover:bg-gray-900 hover:text-white text-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 text-sm font-medium shadow-sm"
+                aria-label="Instagram"
+              >
+                IG
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

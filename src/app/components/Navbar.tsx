@@ -16,11 +16,14 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
   const isMeetTheBoardPage = pathname === '/meet-the-board'
+  const isJoinUsPage = pathname === '/new-member'
+  const isMerchPage = pathname === '/merch'
+
 
   useEffect(() => {
     // Only run scroll logic on home page with About section
-    if (isMeetTheBoardPage) {
-      // On Meet the Board page, hide on any scroll
+    if (isMeetTheBoardPage || isJoinUsPage) {
+      // On Meet the Board or Join Us page, hide on any scroll
       const handleScroll = () => {
         setIsHidden(window.scrollY > 50)
       }
@@ -60,7 +63,7 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     handleScroll() // Run on mount
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [isMeetTheBoardPage])
+  }, [isMeetTheBoardPage, isJoinUsPage])
 
   const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
@@ -71,8 +74,8 @@ export default function Navbar() {
     }
   }
 
-  // Determine text color: black on Meet the Board page, otherwise depends on scroll
-  const textColor = isMeetTheBoardPage ? 'text-gray-900' : (isScrolled ? 'text-gray-900' : 'text-[#f4efe5]')
+  // Determine text color: black on Meet the Board or Join Us page, otherwise depends on scroll
+  const textColor = (isMeetTheBoardPage || isJoinUsPage || isMerchPage) ? 'text-gray-900' : (isScrolled ? 'text-gray-900' : 'text-[#f4efe5]')
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 ${libreBaskerville.className} ${isHidden ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
@@ -81,7 +84,7 @@ export default function Navbar() {
           <li>
             <Link 
               href="/" 
-              className={`${textColor} text-md hover:opacity-70 transition-all duration-300`}
+              className={`${textColor} text-md border-b border-transparent hover:border-current transition-all duration-300`}
             >
               Home
             </Link>
@@ -90,7 +93,7 @@ export default function Navbar() {
             <a 
               href="#about" 
               onClick={handleAboutClick}
-              className={`${textColor} text-md hover:opacity-70 transition-all duration-300 cursor-pointer`}
+              className={`${textColor} text-md border-b border-transparent hover:border-current transition-all duration-300 cursor-pointer`}
             >
               About
             </a>
@@ -98,23 +101,16 @@ export default function Navbar() {
           <li>
             <Link 
               href="/meet-the-board" 
-              className={`${textColor} text-md hover:opacity-70 transition-all duration-300`}
+              className={`${textColor} text-md border-b border-transparent hover:border-current transition-all duration-300`}
             >
-              Meet Our Board
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/alumni" 
-              className={`${textColor} text-md hover:opacity-70 transition-all duration-300`}
-            >
-              Alumni
+              <span className="hidden sm:inline">Meet Our Board</span>
+              <span className="inline sm:hidden">MOB</span>
             </Link>
           </li>
           <li>
             <Link 
               href="/merch" 
-              className={`${textColor} text-md hover:opacity-70 transition-all duration-300`}
+              className={`${textColor} text-md border-b border-transparent hover:border-current transition-all duration-300`}
             >
               Merch
             </Link>

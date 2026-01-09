@@ -12,7 +12,7 @@ const openSans = Open_Sans({
 
 export default function JoiningUs() {
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center py-20 px-6 ${openSans.className}`}>
+    <div className={`min-h-screen bg-white flex items-center justify-center py-20 px-6 ${openSans.className}`}>
       <div className="max-w-2xl w-full text-center">
         {/* Main Content */}
         <div className="bg-white rounded-3xl shadow-xl p-12 mb-8">
@@ -50,7 +50,7 @@ export default function JoiningUs() {
                     Questions about joining?
                   </h3>
                   <p className="text-sm text-gray-600">
-                    Reach out to us at <a href="mailto:board@example.com" className="text-gray-900 hover:underline font-medium">board@example.com</a>
+                    Reach out to us at <a href="mailto:umdnsa@gmail.com" className="text-gray-900 hover:underline font-medium">umdnsa@gmail.com</a>
                   </p>
                 </div>
               </div>

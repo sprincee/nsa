@@ -19,15 +19,15 @@ export default function About() {
         {/* Content Paragraphs */}
         <div className="space-y-6 text-gray-800 text-sm leading-relaxed mb-12">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          We are the <strong>Nepali Student Association (NSA) at the University of Maryland</strong>, a cultural and community-driven student organization dedicated to celebrating Nepali identity, heritage, and community on campus. NSA serves as a welcoming home for Nepali and Nepali-diaspora students, while also creating space for students of all backgrounds to engage with Nepal’s rich culture, history, and traditions through social, cultural, and educational events.
           </p>
           
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          To our general members—welcome! Whether you are looking to connect with fellow Nepali students, celebrate festivals, share food and stories, or simply find a sense of belonging, NSA is here for you. We encourage you to get involved by attending events, joining our mailing list, and participating in the vibrant community we are building together.
           </p>
           
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          To our alumni, friends, and supporters—welcome back and thank you. NSA is sustained by generations of students who have fostered connection, pride, and mutual support. We are always eager to collaborate with campus organizations and community partners to promote cultural exchange and meaningful dialogue. We look forward to strengthening these relationships and continuing to grow a community rooted in tradition, inclusivity, and shared pride.
           </p>
         </div>
 

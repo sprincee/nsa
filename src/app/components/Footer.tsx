@@ -24,7 +24,7 @@ export default function Footer() {
         {/* Social Media Icons */}
         <div className="flex gap-6 items-center">
           <a 
-            href="https://facebook.com" 
+            href="https://www.facebook.com/umdnsa/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-900 hover:text-[#8a1102] transition-colors"
@@ -42,7 +42,7 @@ export default function Footer() {
             <Twitter size={24} />
           </a>
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/umdnsa/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-900 hover:text-[#8a1102] transition-colors"
@@ -51,7 +51,7 @@ export default function Footer() {
             <Instagram size={24} />
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/company/nsaumd/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-900 hover:text-[#8a1102] transition-colors"
